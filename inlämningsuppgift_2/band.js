@@ -6,7 +6,7 @@ export default class Band {
   listMemberInfo; //lista över medlemmar och vilket år de gick med i bandet samt vilket/vilka instrument de spelade i bandet
   listFormerMemberInfo; //Lista över tidigare medlemmar med samma info per musiker som för nuvarande medlemmar samt vilket år musiker lämnade bandet
 
-  
+
   constructor(name, infoText, yearFound, yearEnded, listMemberInfo, listFormerMemberInfo) {
     this.name = name;
     this.infoText = infoText; //refererar till saker utanför konstruktorn (cardBalance, pin)
@@ -14,11 +14,21 @@ export default class Band {
     this.yearEnded = yearEnded;
     this.listMemberInfo = listMemberInfo;
     this.listFormerMemberInfo = listFormerMemberInfo
-    //console.log("Nu är card skapad!");
+    console.log("Nu är band skapad!");
 
   }
-
-  comparePin() {
-    //(ska jämföra inmatad pinkod med kortets pinkod)
+  addBand() {
+    //lägga till en musiker till ett band
   }
+
+  deleteBand() {
+    //ta bort en musiker från ett band
+  }
+
+  showBand()
+  {
+    
 }
+
+  //då ska även musikers lista över vilka band hen är med i uppdateras.
+  }

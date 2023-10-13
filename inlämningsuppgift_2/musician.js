@@ -1,4 +1,4 @@
-export default class Musiker {
+export default class Musician {
 
   name;
   infoText; //infotext
@@ -10,15 +10,26 @@ export default class Musiker {
   constructor(name, infoText, yearBirth, listBand, listFormerBand, instruments) {
     this.name = name;
     this.infoText = infoText; //refererar till saker utanför konstruktorn (cardBalance, pin)
-    this.yearFound = yearFound;
-    this.yearEnded = yearEnded;
-    this.listMemberInfo = listMemberInfo;
-    this.listFormerMemberInfo = listFormerMemberInfo
+    this.yearBirth = yearBirth;
+    this.listBand = listBand;
+    this.listFormerBand = listFormerBand;
+    this.instruments = instruments
     //console.log("Nu är card skapad!");
 
   }
 
-  comparePin() {
-    //(ska jämföra inmatad pinkod med kortets pinkod)
+  addMusicians() {
+    //lägga till en musiker till ett band
   }
+
+  deleteMusicians() {
+    //ta bort en musiker från ett band
+  }
+
+  showBand() {
+
+  }
+
+//då ska även musikers lista över vilka band hen är med i uppdateras.
+
 }
