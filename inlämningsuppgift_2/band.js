@@ -25,7 +25,7 @@ export default class Band {
     //ta bort en musiker från ett band
   }
 
-  showBand()
+  showBandInfo()
   {
     
 }

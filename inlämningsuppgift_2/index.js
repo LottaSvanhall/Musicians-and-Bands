@@ -1,5 +1,8 @@
+import prompt from 'prompt-sync';
 import Band from "./band.js";
 import Musician from "./musician.js";
+
+const inputPrompt = prompt({ sigint: true });
 
 const band = new Band(); //skapa en instans av klassen
 const musicians = new Musician();
@@ -7,28 +10,34 @@ const musicians = new Musician();
 console.log(band);
 console.log(musicians);
 
-console.log(`Meny 
-1. Addera
-2. Multiplicera
-3. Dividera`);
-/*
-const UserMenyChoice = 3;
+console.log
+  (`**Meny** 
+1. Create a new band
+2. Delete a band
+3. Create a new musician
+4. Delete a musician
+Q. Exit menu`);
 
-switch (UserMenyChoice) {
-  case 1:
-    console.log("1 + 2 = " + (1 + 2));
+switch (inputPrompt().toUpperCase().trim()) {
+  case "1":
+    console.log("Create a new band");
     break;
-  case 2:
-    console.log("2 * 4 = " + (2 * 4));
+  case "2":
+    console.log("Delete a band");
     break;
-  case 3:
-    console.log("10 / 2 = " + (10 / 2));
+  case "3":
+    console.log("Create a new musician");
+    break;
+  case "4":
+    console.log("Delete a musician");
+    break;
+  case "Q":
+    console.log("Exit menu");
     break;
   default:
     console.log("Du valde inget giltigt menyval!");
 
-*/
-
+}
 /*Det ska gå att skapa ett nytt band.
 Det ska gå att ta bort band.
 Det ska gå att skapa nya musiker.
