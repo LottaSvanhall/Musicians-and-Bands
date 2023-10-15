@@ -4,7 +4,7 @@ import Musician from "./musician.js";
 
 const inputPrompt = prompt({ sigint: true });
 
-const band = new Band(); //skapa en instans av klassen
+const band = new Band(); //skapa en instans av klassen så det går att jobba med den
 const musicians = new Musician();
 
 console.log(band);
@@ -20,16 +20,20 @@ Q. Exit menu`);
 
 switch (inputPrompt().toUpperCase().trim()) {
   case "1":
-    console.log("Create a new band");
+    //console.log("Create a new band");
+    band.addBand(prompt("Create a new band"));
     break;
   case "2":
-    console.log("Delete a band");
+    //console.log("Delete a band");
+    band.deleteBand(prompt("Delete a band"));
     break;
   case "3":
-    console.log("Create a new musician");
+    //console.log("Create a new music1ian");
+    musicians.addMusicians(prompt("Create a new musician"));
     break;
   case "4":
-    console.log("Delete a musician");
+    //console.log("Delete a musician");
+    musicians.deleteMusicians(prompt("Delete a musician"));
     break;
   case "Q":
     console.log("Exit menu");
