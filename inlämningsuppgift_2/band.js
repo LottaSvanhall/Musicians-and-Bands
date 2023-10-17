@@ -61,4 +61,13 @@ export default class Band {
 
   }
   //då ska även musikers lista över vilka band hen är med i uppdateras.
+  // Skapar ett objekt med denna hundens egenskaps information. 
+  // Används när vi ska skicka in till "Hundar.json". 
+  
+  dataInfo() {
+    return {
+      "name": this.name,
+      //"checkedIn": this.#checkedIn
+    }
+  }
 }
