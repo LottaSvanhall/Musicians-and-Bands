@@ -12,7 +12,7 @@ export default class Musician {
     this.infoText = infoText; //refererar till saker utanför konstruktorn (cardBalance, pin)
     this.yearBirth = yearBirth;
     this.instruments = instruments;
-    
+
     this.listBand = listBand;
     this.listFormerBand = listFormerBand;
     //console.log("Nu är card skapad!");
@@ -36,6 +36,27 @@ export default class Musician {
   get instruments() {
     return this.instruments;
   }
+
+  set name(newName) {
+    this.name = newName;
+    //console.log("");
+  }
+
+  set infoText(newInfoText) {
+    this.infoText = newInfoText;
+    //console.log("");
+  }
+
+  set yearBirth(newYearBirth) {
+    this.yearBirth = newYearBirth;
+    //console.log("");
+  }
+
+  set instruments(newInstruments) {
+    this.instruments = newInstruments;
+    //console.log("");
+  }
+
 
   createMusicians() {
     console.log("Du är i createMusicians");

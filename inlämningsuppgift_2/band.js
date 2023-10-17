@@ -13,10 +13,10 @@ export default class Band {
     this.infoText = infoText; //refererar till saker utanför konstruktorn (cardBalance, pin)
     this.yearFounded = yearFounded;
     this.yearEnded = yearEnded;
-    
+
     this.listMemberInfo = listMemberInfo;
     this.listFormerMemberInfo = listFormerMemberInfo;
-   // console.log("Nu är band skapad!");
+    // console.log("Nu är band skapad!");
 
   }
   get name() {
@@ -37,7 +37,25 @@ export default class Band {
     return this.yearEnded;
   }
 
+  set name(newName) {
+    this.name = newName;
+    //console.log("");
+  }
 
+  set infoText(newInfoText) {
+    this.infoText = newInfoText;
+    //console.log("");
+  }
+
+  set yearFounded(newYearFounded) {
+    this.yearFounded = newYearFounded;
+    //console.log("");
+  }
+
+  set yearEnded(newYearEnded) {
+    this.yearEnded = newYearEnded;
+    //console.log("");
+  }
 
   showBandInfo() {
 
