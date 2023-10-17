@@ -28,7 +28,7 @@ Select choice from menu ->`);
   switch (choice.trim().toUpperCase()) {
     case "1":
       console.log("Create a new band");
-      // band.createBand();
+      band.
       break;
     case "2":
       console.log("Delete a band");
