@@ -11,6 +11,7 @@ const prompt = PromptSync({ sigint: true });
 //const musicians = new Musician();
 
 const bandList = new List(); //kör konstruktorn i klass List
+const artistList = new List();
 
 //console.log(band);
 //console.log(musicians);
@@ -59,23 +60,21 @@ Select a number from the menu above ->`);
 
     case "4":
       console.log("Create a new musician");
-      addMusician()
+      addNewArtist(prompt("**Skapa en ny artist ->"))
       //musicians.createMusicians();
       break;
 
     case "5":
       console.log("Remove a musician");
-      removeMusician()
+      //removeMusician()
       //musicians.deleteMusicians();
       //musicians.deleteMusicians(prompt("Delete a musician"));
       break;
 
     case "6":
-      console.log("Show Musician Info");
-      removeMusician()
+      console.log("Show Artist Info");
+      artistList.showArtistInfo()
       break;
-
-
 
     case "Q":
       console.log("Exit menu");
@@ -121,4 +120,26 @@ function removeBand() {
   }
 }
 
+function addNewArtist() {
+
+  console.log("Skriv in namnet på artisten")
+  const artistName = prompt();
+
+  console.log("Skriv in info om artisten")
+  const artistInfo = prompt();
+
+  console.log("Skriv in artistens födelseår")
+  const artistBirth = prompt();
+  
+  console.log("Vilket instrument spelar artisten(även sång kan skrivas in)")
+  const instruments = prompt();
+
+  console.log("Vilka band är artisten med i?")
+  const artistBand = prompt();
+
+  console.log("Vilka band har artisten tidigare varit med i?")
+  const artistFormerBand = prompt();
+
+  return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand);
+}
 
