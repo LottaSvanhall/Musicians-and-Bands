@@ -18,21 +18,27 @@ const bandList = new List(); //kör konstruktorn i klass List
 let running = true;
 
 while (running) {
-  console.log(`**Meny** 
+  console.log(`***Meny Musicians & Bands*** 
 1. Create a new band
 2. Remove a band
 3. Show band info
 4. Create a new musician
 5. Remove a musician
 6. Show musician info
+7. Add band to artist //ej byggd 7-10
+8. Remove band from artist
+9. Add artist to band
+10. Remove artist from band 
 Q. Exit menu
-Select choice from menu ->`);
+Select a number from the menu above ->`);
 
   const choice = prompt();
 
   switch (choice.trim().toUpperCase()) {
     case "1":
-      bandList.addBandtoList(prompt("Vad heter bandet? -> "));
+      addNewBand(prompt("**Skapa ett nytt band ->"))
+      //bandList.addBandtoList()
+      //prompt("Vad heter bandet? -> "));
       // bandList.addBandtoList(prompt("Skriv in info om bandet -> "))
 
       /*case 1:
@@ -43,7 +49,7 @@ Select choice from menu ->`);
       break;
 
     case "2":
-      removeBand(prompt("Ta bort ett band"))
+      removeBand(prompt("**Ta bort ett band ->"))
       break;
 
     case "3":
@@ -51,23 +57,25 @@ Select choice from menu ->`);
       bandList.showBandInfo()
       break;
 
-    case "3":
+    case "4":
       console.log("Create a new musician");
       addMusician()
       //musicians.createMusicians();
       break;
 
-    case "4":
+    case "5":
       console.log("Remove a musician");
       removeMusician()
       //musicians.deleteMusicians();
       //musicians.deleteMusicians(prompt("Delete a musician"));
       break;
 
-    case "5":
+    case "6":
       console.log("Show Musician Info");
       removeMusician()
       break;
+
+
 
     case "Q":
       console.log("Exit menu");
@@ -78,6 +86,25 @@ Select choice from menu ->`);
 
   }
 }
+
+function addNewBand() {
+
+  console.log("Skriv in namnet på bandet")
+  const bandName = prompt();
+  console.log("Skriv in info om bandet")
+  const bandInfo = prompt();
+  console.log("Skriv in vilket år bandet grundades")
+  const bandFounded = prompt();
+  console.log("Vilket år splittrades bandet")
+  const bandEnded = prompt();
+  console.log("Vilka medlemmar är med i bandet?")
+  const memberInfo = prompt();
+  console.log("Vilka medlemmar har tidigare varit med i bandet?")
+  const formerMemberInfo = prompt();
+
+  return bandList.addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo);
+}
+
 
 function removeBand() {
   bandList.showBandInfo();
@@ -93,3 +120,5 @@ function removeBand() {
     console.log(`Talet måste vara mellan 1 och ${bandList.getLength()}`);
   }
 }
+
+

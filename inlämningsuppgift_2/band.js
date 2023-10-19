@@ -1,71 +1,88 @@
 export default class Band {
 
-  name;
-  infoText; //infotext
-  yearFounded; //årtal bandet bildades
-  yearEnded; //årtal bandet upplöstes
-  listMemberInfo; //lista över medlemmar och vilket år de gick med i bandet samt vilket/vilka instrument de spelade i bandet
-  listFormerMemberInfo; //Lista över tidigare medlemmar med samma info per musiker som för nuvarande medlemmar samt vilket år musiker lämnade bandet
+  bandName;
+  bandInfo; //infotext
+  bandFounded; //årtal bandet bildades
+  bandEnded; //årtal bandet upplöstes
+
+  memberInfo = [] //lista över medlemmar och vilket år de gick med i bandet samt vilket/vilka instrument de spelade i bandet
+  formerMemberInfo = [] //Lista över tidigare medlemmar med samma info per musiker som för nuvarande medlemmar samt vilket år musiker lämnade bandet
 
 
-  constructor(name, infoText, yearFounded, yearEnded, listMemberInfo, listFormerMemberInfo) {
-    this.name = name;
-    this.infoText = infoText; //refererar till saker utanför konstruktorn (cardBalance, pin)
-    this.yearFounded = yearFounded;
-    this.yearEnded = yearEnded;
-
-    this.listMemberInfo = listMemberInfo;
-    this.listFormerMemberInfo = listFormerMemberInfo;
+  constructor(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo) {
+    this.bandName = bandName;
+    this.bandInfo = bandInfo; //refererar till saker utanför konstruktorn (cardBalance, pin)
+    this.bandFounded = bandFounded;
+    this.bandEnded = bandEnded;
+    this.memberInfo = memberInfo;
+    this.formerMemberInfo = formerMemberInfo;
     // console.log("Nu är band skapad!");
 
   }
-  get name() {
-    return this.name;
+  get bandName() {
+    return this.bandName;
     //console.log("Lägg till ett namn: ");
   }
 
-  get infoText() {
-    return this.infoText;
+  get bandInfo() {
+    return this.bandInfo;
     //console.log("Lägg till info text: ")
   }
 
-  get yearFounded() {
-    return this.yearFounded;
+  get bandFounded() {
+    return this.bandFounded;
   }
 
-  get yearEnded() {
-    return this.yearEnded;
+  get bandEnded() {
+    return this.bandEnded;
   }
 
-  set name(newName) {
-    this.name = newName;
+  get memberInfo() {
+    return this.memberInfo;
+  }
+  get formerMemberInfo() {
+    return this.formerMemberInfo;
+  }
+  set bandName(newbandName) {
+    this.name = newbandName;
     //console.log("");
   }
 
-  set infoText(newInfoText) {
-    this.infoText = newInfoText;
+  set infoText(newbandInfo) {
+    this.infoText = newbandInfo;
     //console.log("");
   }
 
-  set yearFounded(newYearFounded) {
-    this.yearFounded = newYearFounded;
+  set yearFounded(newbandFounded) {
+    this.yearFounded = newbandFounded;
     //console.log("");
   }
 
-  set yearEnded(newYearEnded) {
-    this.yearEnded = newYearEnded;
+  set yearEnded(newbandEnded) {
+    this.yearEnded = newbandEnded;
     //console.log("");
   }
 
-  
+  set memberInfo(newmemberInfo) {
+    this.memberInfo = newmemberInfo;
+    //console.log("");
+  }
+
+  set formerMemberInfo(newformerMemberInfo) {
+    this.memberInfo = newformerMemberInfo;
+    //console.log("");
+  }
+
+
+
   //då ska även musikers lista över vilka band hen är med i uppdateras.
   // Skapar ett objekt med denna hundens egenskaps information. 
   // Används när vi ska skicka in till "list.json". 
 
- /* dataInfo() { //används när variabler är privata
-    return {
-      "name": this.name,
-      //"checkedIn": this.#checkedIn
-    }
-  }*/
+  /* dataInfo() { //används när variabler är privata
+     return {
+       "name": this.name,
+       //"checkedIn": this.#checkedIn
+     }
+   }*/
 }

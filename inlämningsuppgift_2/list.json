@@ -1,14 +1,62 @@
 [
   {
-    "name": "Erasure"
+    "bandName": "DepecheMode",
+    "memberInfo": [],
+    "formerMemberInfo": []
   },
   {
-    "name": "U2"
+    "bandName": "Erasure",
+    "memberInfo": [],
+    "formerMemberInfo": []
   },
   {
-    "name": "Nordman"
+    "bandName": "RollingStones",
+    "memberInfo": [],
+    "formerMemberInfo": []
   },
   {
-    "name": "Cure"
+    "bandName": "U2",
+    "memberInfo": [],
+    "formerMemberInfo": []
+  },
+  {
+    "bandName": "U2",
+    "bandInfo": "test",
+    "bandFounded": "1998",
+    "bandEnded": "2017",
+    "memberInfo": [],
+    "formerMemberInfo": []
+  },
+  {
+    "bandName": "Abba",
+    "bandInfo": "svenskt band",
+    "bandFounded": "1972",
+    "bandEnded": "1982",
+    "memberInfo": [],
+    "formerMemberInfo": []
+  },
+  {
+    "bandName": "abba2",
+    "bandInfo": "test",
+    "bandFounded": "1972",
+    "bandEnded": "1982",
+    "memberInfo": [],
+    "formerMemberInfo": []
+  },
+  {
+    "bandName": "Depeche Mode",
+    "bandInfo": "engelskt band",
+    "bandFounded": "1980",
+    "bandEnded": "still playing",
+    "memberInfo": "Dave Martin",
+    "formerMemberInfo": "Andrew F, Alan W"
+  },
+  {
+    "bandName": "",
+    "bandInfo": "",
+    "bandFounded": "",
+    "bandEnded": "",
+    "memberInfo": "",
+    "formerMemberInfo": ""
   }
 ]

@@ -16,14 +16,15 @@ export default class List {
   }
   showBandInfo() {
     for (let i = 0; i < this.bandList.length; i++) {
-      console.log(`${i + 1}. ${this.bandList[i].name}`); //skriver ut namn från bandklassen
+      console.log(`${i + 1}. ${this.bandList[i].bandName}`); //skriver ut namn från bandklassen
     }
   }
 
-  addBandtoList(name) {
-    this.bandList.push(new Band(name)); //lägger till namn i band objektet och lägger till i listan
+  addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo) {
+    this.bandList.push(new Band(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo)); //lägger till namn i band objektet och lägger till i listan
     this.updateJsonFile(); //uppdaterar list.json
   }
+
   removeBandfromList(index) {
     this.bandList.splice(index, 1);
     this.updateJsonFile();
