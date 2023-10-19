@@ -1,59 +1,78 @@
 export default class Musician {
 
-  name;
-  infoText; //infotext
-  yearBirth; //födelsesår
-  listBand; //lista över band musikern är med i
-  listFormerBand; //Lista över tidigare band musiker varit med i
+  artistName;
+  artistInfo; //infotext
+  artistBirth; //födelsesår
+  artistBand; //lista över band musikern är med i
+  artistFormerBand; //Lista över tidigare band musiker varit med i
   instruments; //Vilka instrument som musiker spelar
 
-  constructor(name, infoText, yearBirth, listBand, listFormerBand, instruments) {
-    this.name = name;
-    this.infoText = infoText; //refererar till saker utanför konstruktorn (cardBalance, pin)
-    this.yearBirth = yearBirth;
+  constructor(artistName, artistInfo, artistBirth, artistBand, artistFormerBand, instruments) {
+    this.artistName = artistName;
+    this.artistInfo = artistInfo; //refererar till saker utanför konstruktorn (cardBalance, pin)
+    this.artistBirth = artistBirth;
     this.instruments = instruments;
 
-    this.listBand = listBand;
-    this.listFormerBand = listFormerBand;
+    this.artistBand = artistBand;
+    this.artistFormerBand = artistFormerBand;
     //console.log("Nu är card skapad!");
 
   }
 
-  get name() {
-    return this.name;
+  get artistName() {
+    return this.artistName;
     //console.log("Lägg till ett namn: ");
   }
 
-  get infoText() {
-    return this.infoText;
+  get artistInfo() {
+    return this.artistInfo;
     //console.log("Lägg till info text: ")
   }
 
-  get yearBirth() {
-    return this.yearBirth;
+  get artistBirth() {
+    return this.artistBirth;
   }
 
   get instruments() {
     return this.instruments;
   }
 
-  set name(newName) {
-    this.name = newName;
+  get artistBand() {
+    return this.iartistBand;
+  }
+
+  get artistFormerBand() {
+    return this.artistFormerBand;
+  }
+
+
+  set artistname(newArtistName) {
+    this.artistName = newArtistName;
     //console.log("");
   }
 
-  set infoText(newInfoText) {
-    this.infoText = newInfoText;
+  set artistInfo(newArtistInfo) {
+    this.artistInfo = newArtistInfo;
     //console.log("");
   }
 
-  set yearBirth(newYearBirth) {
-    this.yearBirth = newYearBirth;
+  set artistBirth(newArtistBirth) {
+    this.artistBirth = newArtistBirth;
     //console.log("");
   }
 
   set instruments(newInstruments) {
     this.instruments = newInstruments;
+    //console.log("");
+  }
+
+  set artistBand(newArtistBand) {
+    this.artistBand = newArtistBand;
+    //console.log("");
+  }
+
+  set artistFormerBand(newArtistFormerBand) {
+    this.artistFormerBand = newArtistFormerBand;
     //console.log("");
   }
 
