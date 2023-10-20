@@ -8,6 +8,7 @@ export default class List {
   artistList = [];
 
   constructor() {
+
     this.fetchBandData()
     this.fetchArtistData()
   }
@@ -24,13 +25,14 @@ export default class List {
 
   showBandInfo() {
     for (let i = 0; i < this.bandList.length; i++) {
-      console.log(`${i + 1}. ${this.bandList[i].bandName}`); //skriver ut namn från bandklassen
+      console.log(`${i + 1}. ${this.bandList[i].bandName} ${this.bandList[i].bandInfo} ${this.bandList[i].bandFounded} ${this.bandList[i].bandEnded} ${this.bandList[i].memberInfo} ${this.bandList[i].formerMemberInfo}`);
+      //console.log(bandList); //skriver ut namn från bandklassen
     }
   }
 
   showArtistInfo() {
     for (let i = 0; i < this.artistList.length; i++) {
-      console.log(`${i + 1}. ${this.artistList[i].artistName}`); //skriver ut namn från artistklassen
+      console.log(`${i + 1}. ${this.artistList[i].artistName} ${this.artistList[i].artistInfo} ${this.artistList[i].artistBirth} ${this.artistList[i].instruments} ${this.artistList[i].artistBand} ${this.artistList[i].artistFormerBand}`); //skriver ut namn från artistklassen
     }
   }
 
@@ -59,8 +61,8 @@ export default class List {
   }
 
   getLengthArtist() {
-     return this.artistList.length;
-   }
+    return this.artistList.length;
+  }
 
   updateJsonFile() {
     let tempList = []; // Skapar en temporär lista som ska sparas i "list.json".

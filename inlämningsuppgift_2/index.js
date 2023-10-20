@@ -7,14 +7,8 @@ const prompt = PromptSync({ sigint: true });
 
 //När vi skapar ett nytt Band och Musicians objekt kommer konstruktorn att läsa in dessa till JSON-filen.
 
-//const band = new Band();
-//const musicians = new Musician();
-
 const bandList = new List(); //kör konstruktorn i klass List
 const artistList = new List();
-
-//console.log(band);
-//console.log(musicians);
 
 console.log(`***Meny Musicians & Bands*** 
 ______________________________________________
@@ -26,7 +20,7 @@ ______________________________________________
 5. Remove a musician
 6. Show musician info
 ______________________________________________
-7. Add band to artist //ej byggd 7-10
+7. Add band to artist
 8. Remove band from artist
 ______________________________________________
 9. Add artist to band
@@ -72,7 +66,7 @@ while (running) {
       console.log("Show Artist Info");
       artistList.showArtistInfo()
       break;
-    
+
     case "11":
       console.log(`***Meny Musicians & Bands*** 
 ______________________________________________
@@ -118,7 +112,7 @@ function addNewBand() {
   const bandEnded = prompt();
   console.log("Vilka medlemmar är med i bandet?")
   const memberInfo = prompt();
-  console.log("Vilka medlemmar har tidigare varit med i bandet?")
+  console.log("Vilka medlemmar har tidigare varit med i bandet? Press Enter when done!")
   const formerMemberInfo = prompt();
 
   return bandList.addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo);
@@ -157,7 +151,7 @@ function addNewArtist() {
   console.log("Vilka band är artisten med i?")
   const artistBand = prompt();
 
-  console.log("Vilka band har artisten tidigare varit med i?")
+  console.log("Vilka band har artisten tidigare varit med i? Press Enter when done!")
   const artistFormerBand = prompt();
 
   return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand);

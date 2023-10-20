@@ -40,11 +40,19 @@
     "formerMemberInfo": "olika"
   },
   {
-    "bandName": "hej",
-    "bandInfo": "info",
+    "bandName": "u2",
+    "bandInfo": "usa",
     "bandFounded": "1990",
-    "bandEnded": "2020",
-    "memberInfo": "vet ej",
-    "formerMemberInfo": "olika"
+    "bandEnded": "2000",
+    "memberInfo": "bono",
+    "formerMemberInfo": "sonny"
+  },
+  {
+    "bandName": "GES",
+    "bandInfo": "3st",
+    "bandFounded": "1989",
+    "bandEnded": "2021",
+    "memberInfo": "glenmark ericsson stromstedt",
+    "formerMemberInfo": "inga"
   }
 ]
