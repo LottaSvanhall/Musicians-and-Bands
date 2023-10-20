@@ -18,7 +18,7 @@ export default class List {
   }
 
   fetchArtistData() {
-    const data2 = fs.readFileSync("list.json")
+    const data2 = fs.readFileSync("artistList.json")
     this.artistList = JSON.parse(data2)
   }
 
@@ -54,13 +54,13 @@ export default class List {
     this.updateJsonFileArtist();
   }
 
-  getLength() {
+  getLengthBand() {
     return this.bandList.length;
   }
 
-  getLength2() {
-    return this.artistList.length;
-  }
+  getLengthArtist() {
+     return this.artistList.length;
+   }
 
   updateJsonFile() {
     let tempList = []; // Skapar en temporär lista som ska sparas i "list.json".
@@ -86,7 +86,7 @@ export default class List {
       tempList.push(this.artistList[i]);
       //tempList.push(this.bandList[i].dataInfo()); //används när variabler är privata
     }
-    fs.writeFileSync("./list.json", JSON.stringify(tempList, null, 2), (err) => {
+    fs.writeFileSync("./artistList.json", JSON.stringify(tempList, null, 2), (err) => {
       if (err) throw err;
       console.log('Data written to file');
     });

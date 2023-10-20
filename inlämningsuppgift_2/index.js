@@ -16,37 +16,37 @@ const artistList = new List();
 //console.log(band);
 //console.log(musicians);
 
-let running = true;
-
-while (running) {
-  console.log(`***Meny Musicians & Bands*** 
+console.log(`***Meny Musicians & Bands*** 
+______________________________________________
 1. Create a new band
 2. Remove a band
 3. Show band info
+______________________________________________
 4. Create a new musician
 5. Remove a musician
 6. Show musician info
+______________________________________________
 7. Add band to artist //ej byggd 7-10
 8. Remove band from artist
+______________________________________________
 9. Add artist to band
 10. Remove artist from band 
+______________________________________________
+11. Show menu
 Q. Exit menu
+
 Select a number from the menu above ->`);
+
+let running = true;
+
+while (running) {
+
 
   const choice = prompt();
 
   switch (choice.trim().toUpperCase()) {
     case "1":
       addNewBand(prompt("**Skapa ett nytt band ->"))
-      //bandList.addBandtoList()
-      //prompt("Vad heter bandet? -> "));
-      // bandList.addBandtoList(prompt("Skriv in info om bandet -> "))
-
-      /*case 1:
-        const tal1 = Number(prompt("Skriv in ett tal: "))
-        const tal2 = Number(prompt("Skriv in ett tal: "))
-        console.log(`$(tal1) + $(tal2) = $(tal1 + tal2)`);
-        */
       break;
 
     case "2":
@@ -61,19 +61,39 @@ Select a number from the menu above ->`);
     case "4":
       console.log("Create a new musician");
       addNewArtist(prompt("**Skapa en ny artist ->"))
-      //musicians.createMusicians();
       break;
 
     case "5":
       console.log("Remove a musician");
-      //removeMusician()
-      //musicians.deleteMusicians();
-      //musicians.deleteMusicians(prompt("Delete a musician"));
+      removeArtist(prompt("**Ta bort en musiker ->"))
       break;
 
     case "6":
       console.log("Show Artist Info");
       artistList.showArtistInfo()
+      break;
+    
+    case "11":
+      console.log(`***Meny Musicians & Bands*** 
+______________________________________________
+1. Create a new band
+2. Remove a band
+3. Show band info
+______________________________________________
+4. Create a new musician
+5. Remove a musician
+6. Show musician info
+______________________________________________
+7. Add band to artist //ej byggd 7-10
+8. Remove band from artist
+______________________________________________
+9. Add artist to band
+10. Remove artist from band 
+______________________________________________
+11. Show menu
+Q. Exit menu
+
+Select a number from the menu above ->`);
       break;
 
     case "Q":
@@ -81,7 +101,7 @@ Select a number from the menu above ->`);
       running = false;
       break;
     default:
-      console.log("Du valde inget giltigt menyval!");
+      console.log("Du valde inget giltigt menyval!, tryck 11 för att komma till menyn!");
 
   }
 }
@@ -113,10 +133,10 @@ function removeBand() {
   if (Number(select).toString() === "NaN") { // Kollar så att val går att parsa till ett nummer.
     console.log("Vänligen skriv in ett tal!");
   }
-  if (select <= bandList.getLength() && select >= 1) {
+  if (select <= bandList.getLengthBand() && select >= 1) {
     bandList.removeBandfromList(Number(select) - 1); // Tar det inskrivna valet och minskar med 1. (för arrays index börjar på 0)
   } else {
-    console.log(`Talet måste vara mellan 1 och ${bandList.getLength()}`);
+    console.log(`Talet måste vara mellan 1 och ${bandList.getLengthBand()}`);
   }
 }
 
@@ -130,7 +150,7 @@ function addNewArtist() {
 
   console.log("Skriv in artistens födelseår")
   const artistBirth = prompt();
-  
+
   console.log("Vilket instrument spelar artisten(även sång kan skrivas in)")
   const instruments = prompt();
 
@@ -143,3 +163,16 @@ function addNewArtist() {
   return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand);
 }
 
+function removeArtist() {
+  artistList.showArtistInfo();
+  const select = prompt("Skriv in index för den musiker du vill ta bort ->");
+
+  if (Number(select).toString() === "NaN") { // Kollar så att val går att parsa till ett nummer.
+    console.log("Vänligen skriv in ett tal!");
+  }
+  if (select <= artistList.getLengthArtist() && select >= 1) {
+    artistList.removeArtistfromList(Number(select) - 1); // Tar det inskrivna valet och minskar med 1. (för arrays index börjar på 0)
+  } else {
+    console.log(`Talet måste vara mellan 1 och ${artistList.getLengthArtist()}`);
+  }
+}

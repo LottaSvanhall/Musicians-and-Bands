@@ -1,0 +1,26 @@
+[
+  {
+    "artistName": "Pink",
+    "artistInfo": "usa",
+    "artistBirth": "2020",
+    "instruments": "gitarr",
+    "artistBand": "inga",
+    "artistFormerBand": "vet ej"
+  },
+  {
+    "artistName": "carola",
+    "artistInfo": "svenska",
+    "artistBirth": "1966",
+    "instruments": "piano",
+    "artistBand": "inga",
+    "artistFormerBand": "vet ej"
+  },
+  {
+    "artistName": "Lady Gaga",
+    "artistInfo": "usa",
+    "artistBirth": "1990",
+    "instruments": "munspel",
+    "artistBand": "inga",
+    "artistFormerBand": "inga"
+  }
+]

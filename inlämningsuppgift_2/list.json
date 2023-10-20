@@ -1,62 +1,50 @@
 [
   {
-    "bandName": "DepecheMode",
-    "memberInfo": [],
-    "formerMemberInfo": []
-  },
-  {
-    "bandName": "Erasure",
-    "memberInfo": [],
-    "formerMemberInfo": []
-  },
-  {
-    "bandName": "RollingStones",
-    "memberInfo": [],
-    "formerMemberInfo": []
-  },
-  {
-    "bandName": "U2",
-    "memberInfo": [],
-    "formerMemberInfo": []
-  },
-  {
-    "bandName": "U2",
-    "bandInfo": "test",
-    "bandFounded": "1998",
-    "bandEnded": "2017",
-    "memberInfo": [],
-    "formerMemberInfo": []
-  },
-  {
     "bandName": "Abba",
-    "bandInfo": "svenskt band",
+    "bandInfo": "svenskt",
     "bandFounded": "1972",
-    "bandEnded": "1982",
-    "memberInfo": [],
-    "formerMemberInfo": []
+    "bandEnded": "1980",
+    "memberInfo": "abba",
+    "formerMemberInfo": "inga"
   },
   {
-    "bandName": "abba2",
+    "bandName": "justin",
+    "bandInfo": "usa",
+    "bandFounded": "1990",
+    "bandEnded": "2000",
+    "memberInfo": "inga",
+    "formerMemberInfo": "inga"
+  },
+  {
+    "bandName": "u2",
+    "bandInfo": "usa",
+    "bandFounded": "1998",
+    "bandEnded": "2020",
+    "memberInfo": "olika",
+    "formerMemberInfo": "inga"
+  },
+  {
+    "bandName": "dallas",
+    "bandInfo": "sallad",
+    "bandFounded": "1990",
+    "bandEnded": "2020",
+    "memberInfo": "vet ej",
+    "formerMemberInfo": "inga"
+  },
+  {
+    "bandName": "u2",
     "bandInfo": "test",
-    "bandFounded": "1972",
-    "bandEnded": "1982",
-    "memberInfo": [],
-    "formerMemberInfo": []
+    "bandFounded": "1990",
+    "bandEnded": "2000",
+    "memberInfo": "inga",
+    "formerMemberInfo": "olika"
   },
   {
-    "bandName": "Depeche Mode",
-    "bandInfo": "engelskt band",
-    "bandFounded": "1980",
-    "bandEnded": "still playing",
-    "memberInfo": "Dave Martin",
-    "formerMemberInfo": "Andrew F, Alan W"
-  },
-  {
-    "bandName": "",
-    "bandInfo": "",
-    "bandFounded": "",
-    "bandEnded": "",
-    "memberInfo": "",
-    "formerMemberInfo": ""
+    "bandName": "hej",
+    "bandInfo": "info",
+    "bandFounded": "1990",
+    "bandEnded": "2020",
+    "memberInfo": "vet ej",
+    "formerMemberInfo": "olika"
   }
 ]
