@@ -1,6 +1,7 @@
 import fs from "fs";
 import Band from "./band.js";
 import Musician from "./musician.js";
+import { log } from "console";
 
 export default class List {
 
@@ -44,6 +45,17 @@ export default class List {
   addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand,) {
     this.artistList.push(new Musician(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand)); //lägger till namn i band objektet och lägger till i listan
     this.updateJsonFileArtist(); //uppdaterar list.json
+  }
+
+  addArtisttoBand(indexBand, indexArtist) {
+    this.bandList[indexBand].memberInfo = this.artistList[indexArtist];
+    //console.log(this.bandList[indexBand].memberInfo);
+    this.updateJsonFile();
+  }
+
+  removeArtistfromBand(bandIndex, artistIndex) {
+    this.bandlist[bandIndex].memberInfo = this.artistList[artistIndex]
+    this.updateJsonFile();
   }
 
   removeBandfromList(index) {

@@ -23,8 +23,8 @@ ______________________________________________
 7. Add band to artist
 8. Remove band from artist
 ______________________________________________
-9. Add artist to band
-10. Remove artist from band 
+9. Add artist to band - ej använd
+10. Remove artist from band - ej använd
 ______________________________________________
 11. Show menu
 Q. Exit menu
@@ -67,6 +67,32 @@ while (running) {
       artistList.showArtistInfo()
       break;
 
+    case "7":
+      console.log("Add band to artist")
+      bandList.showBandInfo()
+      const indexBand = Number(prompt("Skriv in nr på band du vill lägga till artisten: "))
+      //indexBand--
+      artistList.showArtistInfo()
+      const indexArtist = Number(prompt("Skriv in nr på artist du vill lägga till bandet: "))
+      //indexArtist--
+      artistList.addArtisttoBand(indexBand - 1, indexArtist - 1)
+      console.log("Band have been added to Artist")
+
+      break;
+
+    case "8":
+      console.log("Remove band from artist")
+      artistList.removeArtistfromBand()
+      const bandIndex = Number(prompt("Skriv in nr på band du vill ta bort från artisten: "))
+      //indexBand--
+      artistList.showArtistInfo()
+      const artistIndex = Number(prompt("Skriv in nr på artist du vill ta bort från bandet: "))
+      //indexArtist--
+      artistList.removeArtistfromBand(bandIndex - 1, artistIndex - 1)
+      console.log("Artist have been removed from Band")
+
+      break;
+
     case "11":
       console.log(`***Meny Musicians & Bands*** 
 ______________________________________________
@@ -77,12 +103,12 @@ ______________________________________________
 4. Create a new musician
 5. Remove a musician
 6. Show musician info
-______________________________________________
-7. Add band to artist //ej byggd 7-10
+______________________________________________S
+7. Add band to artist
 8. Remove band from artist
 ______________________________________________
-9. Add artist to band
-10. Remove artist from band 
+9. Add artist to band - ej använd
+10. Remove artist from band - ej använd
 ______________________________________________
 11. Show menu
 Q. Exit menu

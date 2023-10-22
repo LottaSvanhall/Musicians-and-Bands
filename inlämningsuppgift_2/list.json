@@ -1,58 +1,32 @@
 [
   {
-    "bandName": "Abba",
-    "bandInfo": "svenskt",
-    "bandFounded": "1972",
-    "bandEnded": "1980",
-    "memberInfo": "abba",
-    "formerMemberInfo": "inga"
-  },
-  {
-    "bandName": "justin",
+    "bandName": "U2",
     "bandInfo": "usa",
-    "bandFounded": "1990",
-    "bandEnded": "2000",
-    "memberInfo": "inga",
-    "formerMemberInfo": "inga"
+    "bandFounded": "2002",
+    "bandEnded": "2022",
+    "memberInfo": {
+      "artistName": "Pink",
+      "artistInfo": "usa",
+      "artistBirth": "2002",
+      "instruments": "sing",
+      "artistBand": "inget",
+      "artistFormerBand": "inget"
+    },
+    "formerMemberInfo": "beyonce"
   },
   {
-    "bandName": "u2",
-    "bandInfo": "usa",
-    "bandFounded": "1998",
-    "bandEnded": "2020",
-    "memberInfo": "olika",
-    "formerMemberInfo": "inga"
-  },
-  {
-    "bandName": "dallas",
-    "bandInfo": "sallad",
-    "bandFounded": "1990",
-    "bandEnded": "2020",
-    "memberInfo": "vet ej",
-    "formerMemberInfo": "inga"
-  },
-  {
-    "bandName": "u2",
-    "bandInfo": "test",
-    "bandFounded": "1990",
-    "bandEnded": "2000",
-    "memberInfo": "inga",
-    "formerMemberInfo": "olika"
-  },
-  {
-    "bandName": "u2",
-    "bandInfo": "usa",
-    "bandFounded": "1990",
-    "bandEnded": "2000",
-    "memberInfo": "bono",
-    "formerMemberInfo": "sonny"
-  },
-  {
-    "bandName": "GES",
-    "bandInfo": "3st",
-    "bandFounded": "1989",
+    "bandName": "Coldplay",
+    "bandInfo": "brittiskt band",
+    "bandFounded": "1999",
     "bandEnded": "2021",
-    "memberInfo": "glenmark ericsson stromstedt",
-    "formerMemberInfo": "inga"
+    "memberInfo": {
+      "artistName": "Chris Martin",
+      "artistInfo": "britt",
+      "artistBirth": "1977",
+      "instruments": "gitarr",
+      "artistBand": "Coldplay",
+      "artistFormerBand": "vet ej"
+    },
+    "formerMemberInfo": "unsure"
   }
 ]
