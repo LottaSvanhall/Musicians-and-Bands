@@ -20,11 +20,11 @@ ______________________________________________
 5. Remove a musician
 6. Show musician info
 ______________________________________________
-7. Add band to artist
-8. Remove band from artist
+7. Add artist to band
+8. Remove artist from band
 ______________________________________________
-9. Add artist to band - ej använd
-10. Remove artist from band - ej använd
+9. Add band to artist
+10. Remove band from artist
 ______________________________________________
 11. Show menu
 Q. Exit menu
@@ -68,7 +68,7 @@ while (running) {
       break;
 
     case "7":
-      console.log("Add band to artist")
+      console.log("Add artist to band")
       bandList.showBandInfo()
       const indexBand = Number(prompt("Skriv in nr på band du vill lägga till artisten: "))
       //indexBand--
@@ -76,19 +76,45 @@ while (running) {
       const indexArtist = Number(prompt("Skriv in nr på artist du vill lägga till bandet: "))
       //indexArtist--
       artistList.addArtisttoBand(indexBand - 1, indexArtist - 1)
-      console.log("Band have been added to Artist")
-
+      console.log("Artist have been added to Band")
       break;
 
     case "8":
-      console.log("Remove band from artist")
-      artistList.removeArtistfromBand()
-      const bandIndex = Number(prompt("Skriv in nr på band du vill ta bort från artisten: "))
+      console.log("Remove artist from band")
+      bandList.showBandInfo()
+      const bandIndex = Number(prompt("Skriv in nr på band du vill ta bort artisten ifrån: "))
       //indexBand--
       artistList.showArtistInfo()
       const artistIndex = Number(prompt("Skriv in nr på artist du vill ta bort från bandet: "))
       //indexArtist--
-      artistList.removeArtistfromBand(bandIndex - 1, artistIndex - 1)
+      bandList.removeArtistfromBand(bandIndex - 1, artistIndex - 1)
+      console.log("Artist have been removed from Band")
+
+      break;
+
+    case "9":
+      console.log("Add band to artist")
+      artistList.showArtistInfo()
+      const indexArtist2 = Number(prompt("Skriv in nr på artist du vill lägga till bandet: "))
+      //indexArtist--
+      bandList.showBandInfo()
+      const indexBand2 = Number(prompt("Skriv in nr på band du vill lägga till artisten: "))
+      //indexBand--
+      artistList.addBandtoArtist(indexBand2 - 1, indexArtist2 - 1)
+      console.log("Band have been added to Artist")
+
+      break;
+
+    case "10":
+      console.log("Remove band from artist")
+      artistList.showArtistInfo()
+      const artistIndex2 = Number(prompt("Skriv in nr på artist du vill ta bort från bandet: "))
+      //indexArtist--
+      bandList.showBandInfo()
+      const bandIndex2 = Number(prompt("Skriv in nr på band du vill ta bort från artisten: "))
+      //indexBand--
+
+      artistList.removeArtistfromBand(bandIndex2 - 1, artistIndex2 - 1)
       console.log("Artist have been removed from Band")
 
       break;
@@ -103,12 +129,12 @@ ______________________________________________
 4. Create a new musician
 5. Remove a musician
 6. Show musician info
-______________________________________________S
-7. Add band to artist
-8. Remove band from artist
 ______________________________________________
-9. Add artist to band - ej använd
-10. Remove artist from band - ej använd
+7. Add artist to band
+8. Remove artist from band
+______________________________________________
+9. Add band to artist
+10. Remove band from artist
 ______________________________________________
 11. Show menu
 Q. Exit menu
@@ -136,12 +162,13 @@ function addNewBand() {
   const bandFounded = prompt();
   console.log("Vilket år splittrades bandet")
   const bandEnded = prompt();
-  console.log("Vilka medlemmar är med i bandet?")
+  /*console.log("Vilka medlemmar är med i bandet?")
   const memberInfo = prompt();
   console.log("Vilka medlemmar har tidigare varit med i bandet? Press Enter when done!")
-  const formerMemberInfo = prompt();
+  const formerMemberInfo = prompt();*/
 
-  return bandList.addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo);
+  return bandList.addBandtoList(bandName, bandInfo, bandFounded, bandEnded);
+  //return bandList.addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo);
 }
 
 
@@ -174,13 +201,14 @@ function addNewArtist() {
   console.log("Vilket instrument spelar artisten(även sång kan skrivas in)")
   const instruments = prompt();
 
-  console.log("Vilka band är artisten med i?")
+  /*console.log("Vilka band är artisten med i?")
   const artistBand = prompt();
 
   console.log("Vilka band har artisten tidigare varit med i? Press Enter when done!")
-  const artistFormerBand = prompt();
+  const artistFormerBand = prompt();*/
 
-  return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand);
+  return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments);
+  //  return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand);
 }
 
 function removeArtist() {

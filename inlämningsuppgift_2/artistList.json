@@ -1,18 +1,20 @@
 [
   {
-    "artistName": "Pink",
+    "artistName": "LadyGaga",
     "artistInfo": "usa",
-    "artistBirth": "2002",
-    "instruments": "sing",
-    "artistBand": "inget",
-    "artistFormerBand": "inget"
+    "artistBirth": "1987",
+    "instruments": "piano"
   },
   {
-    "artistName": "Chris Martin",
-    "artistInfo": "britt",
-    "artistBirth": "1977",
+    "artistName": "Carola",
+    "artistInfo": "svensk",
+    "artistBirth": "1966",
     "instruments": "gitarr",
-    "artistBand": "Coldplay",
-    "artistFormerBand": "vet ej"
+    "artistBand": {
+      "bandName": "Erasure",
+      "bandInfo": "synth",
+      "bandFounded": "1983",
+      "bandEnded": "2013"
+    }
   }
 ]

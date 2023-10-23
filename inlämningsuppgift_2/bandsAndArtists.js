@@ -26,36 +26,49 @@ export default class List {
 
   showBandInfo() {
     for (let i = 0; i < this.bandList.length; i++) {
-      console.log(`${i + 1}. ${this.bandList[i].bandName} ${this.bandList[i].bandInfo} ${this.bandList[i].bandFounded} ${this.bandList[i].bandEnded} ${this.bandList[i].memberInfo} ${this.bandList[i].formerMemberInfo}`);
+      console.log(`${i + 1}. ${this.bandList[i].bandName} ${this.bandList[i].bandInfo} ${this.bandList[i].bandFounded} ${this.bandList[i].bandEnded}`);
+      // console.log(`${i + 1}. ${this.bandList[i].bandName} ${this.bandList[i].bandInfo} ${this.bandList[i].bandFounded} ${this.bandList[i].bandEnded} ${this.bandList[i].memberInfo} ${this.bandList[i].formerMemberInfo}`);
       //console.log(bandList); //skriver ut namn från bandklassen
     }
   }
 
   showArtistInfo() {
     for (let i = 0; i < this.artistList.length; i++) {
-      console.log(`${i + 1}. ${this.artistList[i].artistName} ${this.artistList[i].artistInfo} ${this.artistList[i].artistBirth} ${this.artistList[i].instruments} ${this.artistList[i].artistBand} ${this.artistList[i].artistFormerBand}`); //skriver ut namn från artistklassen
+      console.log(`${i + 1}. ${this.artistList[i].artistName} ${this.artistList[i].artistInfo} ${this.artistList[i].artistBirth} ${this.artistList[i].instruments}`);
+      //console.log(`${i + 1}. ${this.artistList[i].artistName} ${this.artistList[i].artistInfo} ${this.artistList[i].artistBirth} ${this.artistList[i].instruments} ${this.artistList[i].artistBand} ${this.artistList[i].artistFormerBand}`); //skriver ut namn från artistklassen
     }
   }
 
-  addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo) {
-    this.bandList.push(new Band(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo)); //lägger till namn i band objektet och lägger till i listan
+  addBandtoList(bandName, bandInfo, bandFounded, bandEnded) {
+    this.bandList.push(new Band(bandName, bandInfo, bandFounded, bandEnded)); //lägger till namn i band objektet och lägger till i listan
     this.updateJsonFile(); //uppdaterar list.json
   }
 
-  addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand,) {
-    this.artistList.push(new Musician(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand)); //lägger till namn i band objektet och lägger till i listan
+  addArtisttoList(artistName, artistInfo, artistBirth, instruments) {
+    this.artistList.push(new Musician(artistName, artistInfo, artistBirth, instruments)); //lägger till namn i band objektet och lägger till i listan
     this.updateJsonFileArtist(); //uppdaterar list.json
   }
 
-  addArtisttoBand(indexBand, indexArtist) {
+  addArtisttoBand(indexBand, indexArtist) { //denna metod verkar funka
     this.bandList[indexBand].memberInfo = this.artistList[indexArtist];
     //console.log(this.bandList[indexBand].memberInfo);
     this.updateJsonFile();
   }
 
   removeArtistfromBand(bandIndex, artistIndex) {
-    this.bandlist[bandIndex].memberInfo = this.artistList[artistIndex]
+    this.bandList[bandIndex].memberInfo = this.artistList[artistIndex];
     this.updateJsonFile();
+  }
+
+  addBandtoArtist(indexBand2, indexArtist2) {   //denna metod verkar funka
+    this.artistList[indexArtist2].artistBand = this.bandList[indexBand2];
+    // console.log(this.artistList[indexArtist2].memberInfo);
+    this.updateJsonFileArtist();
+  }
+
+  removeBandfromArtist(bandIndex2, artistIndex2) {
+    this.artistList[bandIndex2].memberInfo = this.bandList[artistIndex2];
+    this.updateJsonFileArtist();
   }
 
   removeBandfromList(index) {

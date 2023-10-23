@@ -1,5 +1,5 @@
 export default class Musician {
-
+ 
   artistName;
   artistInfo; //infotext
   artistBirth; //födelsesår

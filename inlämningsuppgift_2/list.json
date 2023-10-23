@@ -1,32 +1,26 @@
 [
   {
-    "bandName": "U2",
-    "bandInfo": "usa",
-    "bandFounded": "2002",
-    "bandEnded": "2022",
+    "bandName": "Coldplay",
+    "bandInfo": "brittiskt",
+    "bandFounded": "1997",
+    "bandEnded": "2023",
     "memberInfo": {
-      "artistName": "Pink",
+      "artistName": "LadyGaga",
       "artistInfo": "usa",
-      "artistBirth": "2002",
-      "instruments": "sing",
-      "artistBand": "inget",
-      "artistFormerBand": "inget"
-    },
-    "formerMemberInfo": "beyonce"
+      "artistBirth": "1987",
+      "instruments": "piano"
+    }
   },
   {
-    "bandName": "Coldplay",
-    "bandInfo": "brittiskt band",
-    "bandFounded": "1999",
-    "bandEnded": "2021",
+    "bandName": "Erasure",
+    "bandInfo": "synth",
+    "bandFounded": "1983",
+    "bandEnded": "2013",
     "memberInfo": {
-      "artistName": "Chris Martin",
-      "artistInfo": "britt",
-      "artistBirth": "1977",
-      "instruments": "gitarr",
-      "artistBand": "Coldplay",
-      "artistFormerBand": "vet ej"
-    },
-    "formerMemberInfo": "unsure"
+      "artistName": "LadyGaga",
+      "artistInfo": "usa",
+      "artistBirth": "1987",
+      "instruments": "piano"
+    }
   }
 ]
