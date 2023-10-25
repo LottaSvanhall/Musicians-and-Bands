@@ -70,5 +70,33 @@
       "memberInfo": [],
       "formerMemberInfo": []
     }
+  },
+  {
+    "artistName": "autumn",
+    "artistInfo": "yellow",
+    "artistBirth": "1999",
+    "instruments": "piano",
+    "artistAge": null
+  },
+  {
+    "artistName": "Eskil",
+    "artistInfo": "barn",
+    "artistBirth": "2012",
+    "instruments": "allan",
+    "artistAge": null
+  },
+  {
+    "artistName": "Lisa",
+    "artistInfo": "hej",
+    "artistBirth": "1990",
+    "instruments": "cello",
+    "artistAge": 33
+  },
+  {
+    "artistName": "sara",
+    "artistInfo": "blomma",
+    "artistBirth": "1993",
+    "instruments": "fiol",
+    "artistAge": 30
   }
 ]

@@ -12,7 +12,7 @@ export default class Musician {
     this.artistName = artistName;
     this.artistInfo = artistInfo; //refererar till saker utanför konstruktorn (cardBalance, pin)
     this.artistBirth = artistBirth;
-    this.artistAge = parseInt(Date().substring()) - this.artistBirth
+    this.artistAge //= parseInt(Date().substring(11, 16).trim()) - this.artistBirth
     this.instruments = instruments;
 
     this.artistBand = artistBand;
@@ -20,7 +20,14 @@ export default class Musician {
     //console.log("Nu är card skapad!");
 
   }
-
+  /*
+    getAge() {
+    
+      const currentYear = new Date().getFullYear();
+      return currentYear - this.artistBirth;
+  
+  }
+  */
 
   /*artistAge() {
     const year = parseInt(Date().substring());

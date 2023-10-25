@@ -200,8 +200,10 @@ function addNewArtist() {
   const artistBirth = prompt();
 
   console.log("Artistens ålder är: ")
+  const currentYear = new Date().getFullYear();
+  console.log(currentYear - artistBirth)
 
-  console.log("Vilket instrument spelar artisten(även sång kan skrivas in)")
+  console.log("Vilket instrument spelar artisten, även om sjunger kan skrivas in")
   const instruments = prompt();
 
   /*console.log("Vilka band är artisten med i?")

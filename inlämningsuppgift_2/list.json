@@ -114,5 +114,47 @@
     "bandEnded": "2022",
     "memberInfo": [],
     "formerMemberInfo": []
+  },
+  {
+    "bandName": "regn",
+    "bandInfo": "hav",
+    "bandFounded": "2022",
+    "bandEnded": "",
+    "memberInfo": [
+      {
+        "artistName": "sara",
+        "artistInfo": "blomma",
+        "artistBirth": "1993",
+        "instruments": "fiol",
+        "artistAge": 30
+      }
+    ],
+    "formerMemberInfo": [
+      [
+        {
+          "artistName": "autumn",
+          "artistInfo": "yellow",
+          "artistBirth": "1999",
+          "instruments": "piano",
+          "artistAge": null
+        }
+      ],
+      [
+        {
+          "artistName": "Staffan",
+          "artistInfo": "Stalledng",
+          "artistBirth": "2020",
+          "instruments": "trumpet",
+          "artistBand": {
+            "bandName": "julskinka",
+            "bandInfo": "meat",
+            "bandFounded": "2020",
+            "bandEnded": "2022",
+            "memberInfo": [],
+            "formerMemberInfo": []
+          }
+        }
+      ]
+    ]
   }
 ]
