@@ -1,26 +1,118 @@
 [
   {
-    "bandName": "Coldplay",
-    "bandInfo": "brittiskt",
-    "bandFounded": "1997",
-    "bandEnded": "2023",
-    "memberInfo": {
-      "artistName": "LadyGaga",
-      "artistInfo": "usa",
-      "artistBirth": "1987",
-      "instruments": "piano"
-    }
+    "bandName": "Pumpa",
+    "bandInfo": "orange",
+    "bandFounded": "2020",
+    "bandEnded": "2022",
+    "memberInfo": [],
+    "formerMemberInfo": [
+      [],
+      []
+    ]
   },
   {
-    "bandName": "Erasure",
-    "bandInfo": "synth",
-    "bandFounded": "1983",
-    "bandEnded": "2013",
-    "memberInfo": {
-      "artistName": "LadyGaga",
-      "artistInfo": "usa",
-      "artistBirth": "1987",
-      "instruments": "piano"
-    }
+    "bandName": "Sallad",
+    "bandInfo": "green",
+    "bandFounded": "1999",
+    "bandEnded": "2001",
+    "memberInfo": [],
+    "formerMemberInfo": [
+      [],
+      "",
+      ""
+    ]
+  },
+  {
+    "bandName": "aubergine",
+    "bandInfo": "lila",
+    "bandFounded": "1990",
+    "bandEnded": "",
+    "memberInfo": [
+      {
+        "artistName": "FiaLotta",
+        "artistInfo": "glad",
+        "artistBirth": "1999",
+        "instruments": "piano"
+      },
+      {
+        "artistName": "FiaLotta",
+        "artistInfo": "glad",
+        "artistBirth": "1999",
+        "instruments": "piano"
+      }
+    ],
+    "formerMemberInfo": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "bandName": "citron",
+    "bandInfo": "gul",
+    "bandFounded": "1990",
+    "bandEnded": "",
+    "memberInfo": [
+      {
+        "artistName": "Lisa",
+        "artistInfo": "sur",
+        "artistBirth": "1990",
+        "instruments": "gitarr"
+      }
+    ],
+    "formerMemberInfo": [
+      "",
+      "",
+      "[object Object]",
+      [],
+      [
+        {
+          "artistName": "Anna",
+          "artistInfo": "red",
+          "artistBirth": "1980",
+          "instruments": "gitarr"
+        }
+      ]
+    ]
+  },
+  {
+    "bandName": "julgran",
+    "bandInfo": "december",
+    "bandFounded": "2002",
+    "bandEnded": "",
+    "memberInfo": [
+      {
+        "artistName": "lucia",
+        "artistInfo": "ljus",
+        "artistBirth": "1915",
+        "instruments": "triangel"
+      }
+    ],
+    "formerMemberInfo": [
+      [
+        {
+          "artistName": "jultomten",
+          "artistInfo": "red",
+          "artistBirth": "2022",
+          "instruments": "gitarr"
+        }
+      ]
+    ]
+  },
+  {
+    "bandName": "Banan",
+    "bandInfo": "gul",
+    "bandFounded": "1990",
+    "bandEnded": "2011",
+    "memberInfo": [],
+    "formerMemberInfo": []
+  },
+  {
+    "bandName": "julskinka",
+    "bandInfo": "meat",
+    "bandFounded": "2020",
+    "bandEnded": "2022",
+    "memberInfo": [],
+    "formerMemberInfo": []
   }
 ]

@@ -9,7 +9,7 @@ export default class Band {
   formerMemberInfo = [] //Lista över tidigare medlemmar med samma info per musiker som för nuvarande medlemmar samt vilket år musiker lämnade bandet
 
 
-  constructor(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo) {
+  constructor(bandName, bandInfo, bandFounded, bandEnded, memberInfo = [], formerMemberInfo = []) {
     this.bandName = bandName;
     this.bandInfo = bandInfo; //refererar till saker utanför konstruktorn (cardBalance, pin)
     this.bandFounded = bandFounded;
@@ -18,4 +18,10 @@ export default class Band {
     this.formerMemberInfo = formerMemberInfo;
 
   }
+
+  /* calculateAge() {
+     const currentYear = parseInt(Date().substring(11, 16).trim());
+     const age = currentYear - this.artistBirth;
+     return age;
+   }*/
 }

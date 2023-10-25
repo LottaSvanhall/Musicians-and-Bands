@@ -39,9 +39,20 @@ export default class List {
     }
   }
 
+  showArtistIndexInBand(index) {
+    console.log(this.bandList[index].memberInfo);
+    //console.log(`${i + 1}. ${this.artistList[i].artistName} ${this.artistList[i].artistInfo} ${this.artistList[i].artistBirth} ${this.artistList[i].instruments} ${this.artistList[i].artistBand} ${this.artistList[i].artistFormerBand}`); //skriver ut namn från artistklassen
+
+  }
+  showBandIndexInArtist(index) {
+    console.log(this.artistList[index].artistBand);
+    //console.log(`${i + 1}. ${this.artistList[i].artistName} ${this.artistList[i].artistInfo} ${this.artistList[i].artistBirth} ${this.artistList[i].instruments} ${this.artistList[i].artistBand} ${this.artistList[i].artistFormerBand}`); //skriver ut namn från artistklassen
+  }
+
   addBandtoList(bandName, bandInfo, bandFounded, bandEnded) {
     this.bandList.push(new Band(bandName, bandInfo, bandFounded, bandEnded)); //lägger till namn i band objektet och lägger till i listan
     this.updateJsonFile(); //uppdaterar list.json
+    console.log("Band have been added");
   }
 
   addArtisttoList(artistName, artistInfo, artistBirth, instruments) {
@@ -50,14 +61,22 @@ export default class List {
   }
 
   addArtisttoBand(indexBand, indexArtist) { //denna metod verkar funka
-    this.bandList[indexBand].memberInfo = this.artistList[indexArtist];
-    //console.log(this.bandList[indexBand].memberInfo);
+    this.bandList[indexBand].memberInfo.push(this.artistList[indexArtist])
+    console.log(this.bandList[indexBand].memberInfo);
     this.updateJsonFile();
   }
 
   removeArtistfromBand(bandIndex, artistIndex) {
-    this.bandList[bandIndex].memberInfo = this.artistList[artistIndex];
+    const members = this.bandList[bandIndex].memberInfo //innehåller medlemmarna
+    //console.log(members);
+    const removeformerMembers = members.splice(artistIndex, 1)
+    this.bandList[bandIndex].memberInfo = members
+    this.bandList[bandIndex].formerMemberInfo.push(removeformerMembers)
+    // this.bandList[bandIndex].formerMemberInfo.push(this.bandList[bandIndex].memberInfo)
+    //index på det som ska tas bort artistIndex,1
+    // console.log(this.artistList[artistIndex]);
     this.updateJsonFile();
+
   }
 
   addBandtoArtist(indexBand2, indexArtist2) {   //denna metod verkar funka
@@ -67,7 +86,10 @@ export default class List {
   }
 
   removeBandfromArtist(bandIndex2, artistIndex2) {
-    this.artistList[bandIndex2].memberInfo = this.bandList[artistIndex2];
+    const artists = this.artistList[artistIndex2].artistBand
+    const removeformerBands = artists.splice(bandIndex2, 1)
+    this.artistList[bandIndex2].artistBand = artists
+    this.artistList[bandIndex2].artistFormerBand.push(removeformerBands)
     this.updateJsonFileArtist();
   }
 

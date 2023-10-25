@@ -1,20 +1,74 @@
 [
   {
-    "artistName": "LadyGaga",
-    "artistInfo": "usa",
-    "artistBirth": "1987",
+    "artistName": "Pia",
+    "artistInfo": "blond",
+    "artistBirth": "1990",
+    "instruments": "sing"
+  },
+  {
+    "artistName": "Anna",
+    "artistInfo": "red",
+    "artistBirth": "1980",
+    "instruments": "gitarr"
+  },
+  {
+    "artistName": "FiaLotta",
+    "artistInfo": "glad",
+    "artistBirth": "1999",
     "instruments": "piano"
   },
   {
-    "artistName": "Carola",
-    "artistInfo": "svensk",
-    "artistBirth": "1966",
-    "instruments": "gitarr",
+    "artistName": "Lisa",
+    "artistInfo": "sur",
+    "artistBirth": "1990",
+    "instruments": "gitarr"
+  },
+  {
+    "artistName": "jultomten",
+    "artistInfo": "red",
+    "artistBirth": "2022",
+    "instruments": "gitarr"
+  },
+  {
+    "artistName": "lucia",
+    "artistInfo": "ljus",
+    "artistBirth": "1915",
+    "instruments": "triangel",
     "artistBand": {
-      "bandName": "Erasure",
-      "bandInfo": "synth",
-      "bandFounded": "1983",
-      "bandEnded": "2013"
+      "bandName": "Banan",
+      "bandInfo": "gul",
+      "bandFounded": "1990",
+      "bandEnded": "2011",
+      "memberInfo": [],
+      "formerMemberInfo": []
+    }
+  },
+  {
+    "artistName": "Chiquita",
+    "artistInfo": "afrika",
+    "artistBirth": "2003",
+    "instruments": "mungiga",
+    "artistBand": {
+      "bandName": "julskinka",
+      "bandInfo": "meat",
+      "bandFounded": "2020",
+      "bandEnded": "2022",
+      "memberInfo": [],
+      "formerMemberInfo": []
+    }
+  },
+  {
+    "artistName": "Staffan",
+    "artistInfo": "Stalledng",
+    "artistBirth": "2020",
+    "instruments": "trumpet",
+    "artistBand": {
+      "bandName": "julskinka",
+      "bandInfo": "meat",
+      "bandFounded": "2020",
+      "bandEnded": "2022",
+      "memberInfo": [],
+      "formerMemberInfo": []
     }
   }
 ]
