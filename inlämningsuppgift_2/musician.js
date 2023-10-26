@@ -7,7 +7,6 @@ export default class Musician {
   artistBand;
   artistFormerBand;
 
-
   constructor(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand) {
     this.artistName = artistName;
     this.artistInfo = artistInfo;
@@ -19,5 +18,4 @@ export default class Musician {
     this.artistFormerBand = artistFormerBand;
 
   }
-  
 }

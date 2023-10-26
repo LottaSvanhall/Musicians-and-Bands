@@ -5,9 +5,8 @@ export default class Band {
   bandFounded;
   bandEnded;
 
-  memberInfo = [] 
-  formerMemberInfo = [] 
-
+  memberInfo = []
+  formerMemberInfo = []
 
   constructor(bandName, bandInfo, bandFounded, bandEnded, memberInfo = [], formerMemberInfo = []) {
     this.bandName = bandName;

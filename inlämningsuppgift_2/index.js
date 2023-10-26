@@ -1,6 +1,4 @@
 import PromptSync from "prompt-sync";
-//import Band from "./band.js";
-//import Musician from "./musician.js";
 import List from "./bandsAndArtists.js";
 
 const prompt = PromptSync({ sigint: true });
@@ -68,10 +66,8 @@ while (running) {
       console.log("Add artist to band")
       list.showBandInfo()
       const indexBand = Number(prompt("Skriv in nr på band du vill lägga till artisten: "))
-      //indexBand--
       list.showArtistInfo()
       const indexArtist = Number(prompt("Skriv in nr på artist du vill lägga till bandet: "))
-      //indexArtist--
       list.addArtisttoBand(indexBand - 1, indexArtist - 1)
       console.log("Artist have been added to Band")
       break;
@@ -80,10 +76,8 @@ while (running) {
       console.log("Remove artist from band")
       list.showBandInfo()
       const bandIndex = Number(prompt("Skriv in nr på band du vill ta bort artisten ifrån: "))
-      //indexBand--
       list.showArtistIndexInBand(bandIndex - 1)
       const artistIndex = Number(prompt("Skriv in index på artist du vill ta bort från bandet. Översta artisten har index 0: "))
-      //indexArtist--
       list.removeArtistfromBand(bandIndex - 1, artistIndex - 1)
       console.log("Artist have been removed from Band")
 
@@ -93,10 +87,8 @@ while (running) {
       console.log("Add band to artist")
       list.showBandInfo()
       const indexBand2 = Number(prompt("Skriv in nr på band du vill lägga till artisten: "))
-      //indexBand--
       list.showArtistInfo()
       const indexArtist2 = Number(prompt("Skriv in nr på artisten som du vill lägga till bandet: "))
-      //indexArtist--
       list.addBandtoArtist(indexBand2 - 1, indexArtist2 - 1)
       console.log("Band have been added to Artist")
 
@@ -106,10 +98,8 @@ while (running) {
       console.log("Remove band from artist")
       list.showArtistInfo()
       const artistIndex2 = Number(prompt("Skriv in nr på artist du vill ta bort från bandet: "))
-      //indexArtist--
       list.showBandIndexInArtist(artistIndex2 - 1)
       const bandIndex2 = Number(prompt("Skriv in nr på band du vill ta bort från artisten: "))
-      //indexBand--
       list.removeBandfromArtist(bandIndex2 - 1, artistIndex2 - 1)
 
       console.log("Artist have been removed from Band")
@@ -170,7 +160,6 @@ function addNewBand() {
 
 function removeBand() {
   list.showBandInfo();
-  // Skriver ut listan på alla band med index i början.
   const select = prompt("Skriv in nr för det band du vill ta bort ->");
 
   if (Number(select).toString() === "NaN") {
@@ -214,7 +203,7 @@ function removeArtist() {
     console.log("Vänligen skriv in ett tal!");
   }
   if (select <= list.getLengthArtist() && select >= 1) {
-    list.removeArtistfromList(Number(select) - 1); // Tar det inskrivna valet och minskar med 1. (för arrays index börjar på 0)
+    list.removeArtistfromList(Number(select) - 1);
   } else {
     console.log(`Talet måste vara mellan 1 och ${list.getLengthArtist()}`);
   }
