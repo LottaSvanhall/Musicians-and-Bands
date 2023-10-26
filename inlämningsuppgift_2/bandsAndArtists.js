@@ -5,7 +5,7 @@ import { log } from "console";
 
 export default class List {
 
-  bandList = []; //en array med bandobjekt
+  bandList = [];
   artistList = [];
 
   constructor() {
@@ -27,7 +27,6 @@ export default class List {
   showBandInfo() {
     for (let i = 0; i < this.bandList.length; i++) {
       console.log(`${i + 1}. ${this.bandList[i].bandName} ${this.bandList[i].bandInfo} ${this.bandList[i].bandFounded} ${this.bandList[i].bandEnded}`);
-      // console.log(`${i + 1}. ${this.bandList[i].bandName} ${this.bandList[i].bandInfo} ${this.bandList[i].bandFounded} ${this.bandList[i].bandEnded} ${this.bandList[i].memberInfo} ${this.bandList[i].formerMemberInfo}`);
       //console.log(bandList); //skriver ut namn från bandklassen
     }
   }
@@ -50,17 +49,17 @@ export default class List {
   }
 
   addBandtoList(bandName, bandInfo, bandFounded, bandEnded) {
-    this.bandList.push(new Band(bandName, bandInfo, bandFounded, bandEnded)); //lägger till namn i band objektet och lägger till i listan
-    this.updateJsonFile(); //uppdaterar list.json
+    this.bandList.push(new Band(bandName, bandInfo, bandFounded, bandEnded)); 
+    this.updateJsonFile();
     console.log("Band have been added");
   }
 
   addArtisttoList(artistName, artistInfo, artistBirth, instruments) {
-    this.artistList.push(new Musician(artistName, artistInfo, artistBirth, instruments)); //lägger till namn i band objektet och lägger till i listan
-    this.updateJsonFileArtist(); //uppdaterar list.json
+    this.artistList.push(new Musician(artistName, artistInfo, artistBirth, instruments));
+    this.updateJsonFileArtist();
   }
 
-  addArtisttoBand(indexBand, indexArtist) { //denna metod verkar funka
+  addArtisttoBand(indexBand, indexArtist) {
     this.bandList[indexBand].memberInfo.push(this.artistList[indexArtist])
     console.log(this.bandList[indexBand].memberInfo);
     this.updateJsonFile();
@@ -72,14 +71,12 @@ export default class List {
     const removeformerMembers = members.splice(artistIndex, 1)
     this.bandList[bandIndex].memberInfo = members
     this.bandList[bandIndex].formerMemberInfo.push(removeformerMembers)
-    // this.bandList[bandIndex].formerMemberInfo.push(this.bandList[bandIndex].memberInfo)
-    //index på det som ska tas bort artistIndex,1
     // console.log(this.artistList[artistIndex]);
     this.updateJsonFile();
 
   }
 
-  addBandtoArtist(indexBand2, indexArtist2) {   //denna metod verkar funka
+  addBandtoArtist(indexBand2, indexArtist2) {
     this.artistList[indexArtist2].artistBand = this.bandList[indexBand2];
     // console.log(this.artistList[indexArtist2].memberInfo);
     this.updateJsonFileArtist();
@@ -112,13 +109,10 @@ export default class List {
   }
 
   updateJsonFile() {
-    let tempList = []; // Skapar en temporär lista som ska sparas i "list.json".
+    let tempList = [];
 
     for (let i = 0; i < this.bandList.length; i++) {
-      // Använder dataInfo som ger mig ett nytt objekt med alla hund-objektet egenskaps information.
-      // Om vi sparar hund-objektet direkt, kommer inte informationen från privata egenskaper med.
-      tempList.push(this.bandList[i]);
-      //tempList.push(this.bandList[i].dataInfo()); //används när variabler är privata
+        tempList.push(this.bandList[i]);
     }
     fs.writeFileSync("./list.json", JSON.stringify(tempList, null, 2), (err) => {
       if (err) throw err;
@@ -127,14 +121,11 @@ export default class List {
   }
 
   updateJsonFileArtist() {
-    let tempList = []; // Skapar en temporär lista som ska sparas i "list.json".
+    let tempList = [];
 
     for (let i = 0; i < this.artistList.length; i++) {
-      // Använder dataInfo som ger mig ett nytt objekt med alla hund-objektet egenskaps information.
-      // Om vi sparar hund-objektet direkt, kommer inte informationen från privata egenskaper med.
       tempList.push(this.artistList[i]);
-      //tempList.push(this.bandList[i].dataInfo()); //används när variabler är privata
-    }
+     }
     fs.writeFileSync("./artistList.json", JSON.stringify(tempList, null, 2), (err) => {
       if (err) throw err;
       console.log('Data written to file');

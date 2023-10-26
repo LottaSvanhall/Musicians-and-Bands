@@ -1,102 +1,58 @@
 [
   {
-    "artistName": "Pia",
-    "artistInfo": "blond",
-    "artistBirth": "1990",
-    "instruments": "sing"
-  },
-  {
-    "artistName": "Anna",
-    "artistInfo": "red",
-    "artistBirth": "1980",
-    "instruments": "gitarr"
-  },
-  {
-    "artistName": "FiaLotta",
-    "artistInfo": "glad",
-    "artistBirth": "1999",
-    "instruments": "piano"
-  },
-  {
-    "artistName": "Lisa",
-    "artistInfo": "sur",
-    "artistBirth": "1990",
-    "instruments": "gitarr"
-  },
-  {
-    "artistName": "jultomten",
-    "artistInfo": "red",
-    "artistBirth": "2022",
-    "instruments": "gitarr"
-  },
-  {
-    "artistName": "lucia",
-    "artistInfo": "ljus",
-    "artistBirth": "1915",
-    "instruments": "triangel",
+    "artistName": "Pink",
+    "artistInfo": "amerikan",
+    "artistBirth": "1997",
+    "instruments": "sjunger",
+    "artistAge": 26,
     "artistBand": {
-      "bandName": "Banan",
-      "bandInfo": "gul",
-      "bandFounded": "1990",
-      "bandEnded": "2011",
+      "bandName": "sallad",
+      "bandInfo": "green",
+      "bandFounded": "1998",
+      "bandEnded": "2001",
       "memberInfo": [],
       "formerMemberInfo": []
     }
   },
   {
-    "artistName": "Chiquita",
-    "artistInfo": "afrika",
-    "artistBirth": "2003",
-    "instruments": "mungiga",
-    "artistBand": {
-      "bandName": "julskinka",
-      "bandInfo": "meat",
-      "bandFounded": "2020",
-      "bandEnded": "2022",
-      "memberInfo": [],
-      "formerMemberInfo": []
-    }
-  },
-  {
-    "artistName": "Staffan",
-    "artistInfo": "Stalledng",
-    "artistBirth": "2020",
-    "instruments": "trumpet",
-    "artistBand": {
-      "bandName": "julskinka",
-      "bandInfo": "meat",
-      "bandFounded": "2020",
-      "bandEnded": "2022",
-      "memberInfo": [],
-      "formerMemberInfo": []
-    }
-  },
-  {
-    "artistName": "autumn",
-    "artistInfo": "yellow",
-    "artistBirth": "1999",
+    "artistName": "Red",
+    "artistInfo": "canada",
+    "artistBirth": "1992",
     "instruments": "piano",
-    "artistAge": null
+    "artistAge": 31,
+    "artistBand": {
+      "bandName": "Pumpa",
+      "bandInfo": "orange",
+      "bandFounded": "2019",
+      "bandEnded": "",
+      "memberInfo": [],
+      "formerMemberInfo": [
+        [],
+        [],
+        []
+      ]
+    }
+  },
+  {
+    "artistName": "Eva",
+    "artistInfo": "fin",
+    "artistBirth": "1975",
+    "instruments": "gitarr",
+    "artistBand": {
+      "bandName": "tomat",
+      "bandInfo": "red",
+      "bandFounded": "1999",
+      "bandEnded": "2007",
+      "memberInfo": [],
+      "formerMemberInfo": []
+    },
+    "artistAge": 48
   },
   {
     "artistName": "Eskil",
-    "artistInfo": "barn",
+    "artistInfo": "kind",
     "artistBirth": "2012",
-    "instruments": "allan",
-    "artistAge": null
-  },
-  {
-    "artistName": "Lisa",
-    "artistInfo": "hej",
-    "artistBirth": "1990",
-    "instruments": "cello",
-    "artistAge": 33
-  },
-  {
-    "artistName": "sara",
-    "artistInfo": "blomma",
-    "artistBirth": "1993",
-    "instruments": "fiol",
-    "artistAge": 30
+    "instruments": "piano",
+    "artistAge": 11
   }
 ]

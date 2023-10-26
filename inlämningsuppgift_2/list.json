@@ -2,159 +2,38 @@
   {
     "bandName": "Pumpa",
     "bandInfo": "orange",
-    "bandFounded": "2020",
-    "bandEnded": "2022",
+    "bandFounded": "2019",
+    "bandEnded": "",
     "memberInfo": [],
     "formerMemberInfo": [
+      [],
+      [],
       [],
       []
     ]
   },
   {
-    "bandName": "Sallad",
-    "bandInfo": "green",
-    "bandFounded": "1999",
-    "bandEnded": "2001",
-    "memberInfo": [],
-    "formerMemberInfo": [
-      [],
-      "",
-      ""
-    ]
-  },
-  {
-    "bandName": "aubergine",
-    "bandInfo": "lila",
-    "bandFounded": "1990",
-    "bandEnded": "",
-    "memberInfo": [
-      {
-        "artistName": "FiaLotta",
-        "artistInfo": "glad",
-        "artistBirth": "1999",
-        "instruments": "piano"
-      },
-      {
-        "artistName": "FiaLotta",
-        "artistInfo": "glad",
-        "artistBirth": "1999",
-        "instruments": "piano"
-      }
-    ],
-    "formerMemberInfo": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "bandName": "citron",
-    "bandInfo": "gul",
-    "bandFounded": "1990",
-    "bandEnded": "",
-    "memberInfo": [
-      {
-        "artistName": "Lisa",
-        "artistInfo": "sur",
-        "artistBirth": "1990",
-        "instruments": "gitarr"
-      }
-    ],
-    "formerMemberInfo": [
-      "",
-      "",
-      "[object Object]",
-      [],
-      [
-        {
-          "artistName": "Anna",
-          "artistInfo": "red",
-          "artistBirth": "1980",
-          "instruments": "gitarr"
-        }
-      ]
-    ]
-  },
-  {
-    "bandName": "julgran",
-    "bandInfo": "december",
-    "bandFounded": "2002",
-    "bandEnded": "",
-    "memberInfo": [
-      {
-        "artistName": "lucia",
-        "artistInfo": "ljus",
-        "artistBirth": "1915",
-        "instruments": "triangel"
-      }
-    ],
-    "formerMemberInfo": [
-      [
-        {
-          "artistName": "jultomten",
-          "artistInfo": "red",
-          "artistBirth": "2022",
-          "instruments": "gitarr"
-        }
-      ]
-    ]
-  },
-  {
-    "bandName": "Banan",
-    "bandInfo": "gul",
-    "bandFounded": "1990",
-    "bandEnded": "2011",
-    "memberInfo": [],
-    "formerMemberInfo": []
-  },
-  {
-    "bandName": "julskinka",
-    "bandInfo": "meat",
-    "bandFounded": "2020",
+    "bandName": "Ghost",
+    "bandInfo": "black",
+    "bandFounded": "2021",
     "bandEnded": "2022",
     "memberInfo": [],
     "formerMemberInfo": []
   },
   {
-    "bandName": "regn",
-    "bandInfo": "hav",
-    "bandFounded": "2022",
-    "bandEnded": "",
-    "memberInfo": [
-      {
-        "artistName": "sara",
-        "artistInfo": "blomma",
-        "artistBirth": "1993",
-        "instruments": "fiol",
-        "artistAge": 30
-      }
-    ],
-    "formerMemberInfo": [
-      [
-        {
-          "artistName": "autumn",
-          "artistInfo": "yellow",
-          "artistBirth": "1999",
-          "instruments": "piano",
-          "artistAge": null
-        }
-      ],
-      [
-        {
-          "artistName": "Staffan",
-          "artistInfo": "Stalledng",
-          "artistBirth": "2020",
-          "instruments": "trumpet",
-          "artistBand": {
-            "bandName": "julskinka",
-            "bandInfo": "meat",
-            "bandFounded": "2020",
-            "bandEnded": "2022",
-            "memberInfo": [],
-            "formerMemberInfo": []
-          }
-        }
-      ]
-    ]
+    "bandName": "tomat",
+    "bandInfo": "red",
+    "bandFounded": "1999",
+    "bandEnded": "2007",
+    "memberInfo": [],
+    "formerMemberInfo": []
+  },
+  {
+    "bandName": "sallad",
+    "bandInfo": "green",
+    "bandFounded": "1998",
+    "bandEnded": "2001",
+    "memberInfo": [],
+    "formerMemberInfo": []
   }
 ]

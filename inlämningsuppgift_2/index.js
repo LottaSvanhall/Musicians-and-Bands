@@ -5,9 +5,7 @@ import List from "./bandsAndArtists.js";
 
 const prompt = PromptSync({ sigint: true });
 
-//När vi skapar ett nytt Band och Musicians objekt kommer konstruktorn att läsa in dessa till JSON-filen.
-
-const list = new List(); //kör konstruktorn i klass List
+const list = new List();
 
 console.log(`***Meny Musicians & Bands*** 
 ______________________________________________
@@ -84,7 +82,6 @@ while (running) {
       const bandIndex = Number(prompt("Skriv in nr på band du vill ta bort artisten ifrån: "))
       //indexBand--
       list.showArtistIndexInBand(bandIndex - 1)
-      //list.showArtistInfo() //byt funktion
       const artistIndex = Number(prompt("Skriv in index på artist du vill ta bort från bandet. Översta artisten har index 0: "))
       //indexArtist--
       list.removeArtistfromBand(bandIndex - 1, artistIndex - 1)
@@ -98,7 +95,7 @@ while (running) {
       const indexBand2 = Number(prompt("Skriv in nr på band du vill lägga till artisten: "))
       //indexBand--
       list.showArtistInfo()
-      const indexArtist2 = Number(prompt("Skriv in index på band du vill ta bort från artisten. Översta bandet har index 0:: "))
+      const indexArtist2 = Number(prompt("Skriv in nr på artisten som du vill lägga till bandet: "))
       //indexArtist--
       list.addBandtoArtist(indexBand2 - 1, indexArtist2 - 1)
       console.log("Band have been added to Artist")
@@ -110,11 +107,10 @@ while (running) {
       list.showArtistInfo()
       const artistIndex2 = Number(prompt("Skriv in nr på artist du vill ta bort från bandet: "))
       //indexArtist--
-      // list.showBandInfo()
       list.showBandIndexInArtist(artistIndex2 - 1)
       const bandIndex2 = Number(prompt("Skriv in nr på band du vill ta bort från artisten: "))
       //indexBand--
-      list.removeArtistfromBand(bandIndex2 - 1, artistIndex2 - 1)
+      list.removeBandfromArtist(bandIndex2 - 1, artistIndex2 - 1)
 
       console.log("Artist have been removed from Band")
 
@@ -157,34 +153,33 @@ function addNewBand() {
 
   console.log("Skriv in namnet på bandet")
   const bandName = prompt();
+
   console.log("Skriv in info om bandet")
   const bandInfo = prompt();
+
   console.log("Skriv in vilket år bandet grundades")
   const bandFounded = prompt();
+
   console.log("Vilket år splittrades bandet")
   const bandEnded = prompt();
-  /*console.log("Vilka medlemmar är med i bandet?")
-  const memberInfo = prompt();
-  console.log("Vilka medlemmar har tidigare varit med i bandet? Press Enter when done!")
-  const formerMemberInfo = prompt();*/
 
   return list.addBandtoList(bandName, bandInfo, bandFounded, bandEnded);
-  //return bandList.addBandtoList(bandName, bandInfo, bandFounded, bandEnded, memberInfo, formerMemberInfo);
+
 }
 
 
 function removeBand() {
   list.showBandInfo();
-  //hundLista.skrivUtHundar(); // Skriver ut listan på alla hundar med index i början.
-  const select = prompt("Skriv in index för det band du vill ta bort ->");
+  // Skriver ut listan på alla band med index i början.
+  const select = prompt("Skriv in nr för det band du vill ta bort ->");
 
-  if (Number(select).toString() === "NaN") { // Kollar så att val går att parsa till ett nummer.
+  if (Number(select).toString() === "NaN") {
     console.log("Vänligen skriv in ett tal!");
   }
   if (select <= list.getLengthBand() && select >= 1) {
-    list.removeBandfromList(Number(select) - 1); // Tar det inskrivna valet och minskar med 1. (för arrays index börjar på 0)
+    list.removeBandfromList(Number(select) - 1);
   } else {
-    console.log(`Talet måste vara mellan 1 och ${bandList.getLengthBand()}`);
+    console.log(`Talet måste vara mellan 1 och ${list.getLengthBand()}`);
   }
 }
 
@@ -206,21 +201,16 @@ function addNewArtist() {
   console.log("Vilket instrument spelar artisten, även om sjunger kan skrivas in")
   const instruments = prompt();
 
-  /*console.log("Vilka band är artisten med i?")
-  const artistBand = prompt();
-
-  console.log("Vilka band har artisten tidigare varit med i? Press Enter when done!")
-  const artistFormerBand = prompt();*/
 
   return list.addArtisttoList(artistName, artistInfo, artistBirth, instruments);
-  //  return artistList.addArtisttoList(artistName, artistInfo, artistBirth, instruments, artistBand, artistFormerBand);
+
 }
 
 function removeArtist() {
   list.showArtistInfo();
-  const select = prompt("Skriv in index för den musiker du vill ta bort ->");
+  const select = prompt("Skriv in nr för den musiker du vill ta bort ->");
 
-  if (Number(select).toString() === "NaN") { // Kollar så att val går att parsa till ett nummer.
+  if (Number(select).toString() === "NaN") {
     console.log("Vänligen skriv in ett tal!");
   }
   if (select <= list.getLengthArtist() && select >= 1) {
